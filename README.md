@@ -28,24 +28,20 @@ ibd-rnaseq/
 │   │	    └── geo_processed/                 
 │   └── processed/                     # Processed data objects
 ├── scripts/
-│   ├── abundance_fisher_tests.R
-│   ├── process_validation.R
-│   ├── process_il13_microarray.R
-│   ├── process_bulk_rna.R
-│   ├── process_scrna_main.R
-│   ├── deg_il22_script.R
-│   ├── deg_validation.R
-│   ├── fisher_enrichment.R
-│   ├── il13_heatmap.R
-│   ├── il13_preprocess.R
-│   ├── il13_module_score.R
-│   ├── pathway_module_scoring.R
-│   ├── cytosig_analysis.R
-│   ├── cellphonedb_analysis.R
-│   ├── run_all_script.R
-│   ├── tl1a_il22ra1_analysis.R
-│   ├── config.R
-│   └── utils_functions.R
+│   │   ├── process_validation_data.R
+│   │   ├── process_il13_microarray.R
+│   │   └── process_bulk_rnaseq.R
+│   │   └── qc_scrna.R
+│   │   ├── deg_il22_tcells.R
+│   │   ├── deg_bulk_rnaseq.R
+│   │   └── deg_validation.R
+│   │   ├── fisher_enrichment.R
+│   │   ├── module_scoring.R
+│   │   └── cytokine_signatures.R
+│   │   ├── cellphonedb_analysis.R
+│   │   └── ligand_receptor_heatmap.R
+│   │   └── config.R
+│       └── utils_functions.R
 ├── results/
 │   ├── figures/                       # Output plots
 │   ├── tables/                        # Output tables
