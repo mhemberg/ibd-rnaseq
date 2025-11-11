@@ -5,8 +5,6 @@
 # Purpose: Generate heatmaps of IL-13 response signatures across epithelial cell types
 # Input: IL-13 signature comparison results
 # Output: Heatmaps showing signature enrichment and differences
-#
-# Original file: IL13_microarray/il13_heatmap.docx (date: 20250101)
 ################################################################################
 
 # Load configuration and utilities
@@ -71,7 +69,7 @@ sig_file <- file.path(
 message("Loading from: ", sig_file)
 validate_file_exists(sig_file)
 
-signature_data <- read.table(sig_file, check.names = FALSE, row.names = NULL, header = TRUE)
+signature_data <- read.table(sig_file, check.names = FALSE, header = TRUE)
 message("Loaded ", nrow(signature_data), " rows")
 
 ################################################################################
@@ -343,6 +341,3 @@ message("  Data tables: ", TABLES_DIR)
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("IL-13 signature heatmap generation complete!")
-message("==========================================")

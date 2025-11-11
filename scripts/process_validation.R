@@ -5,8 +5,6 @@
 # Purpose: Load and process cytokine treatment validation scRNA-seq data
 # Input: GSE233063 raw data (10X format)
 # Output: Merged, QC'd, and processed Seurat object
-#
-# Original file: other_scRNAseq/data.docx (date: 20240418)
 ################################################################################
 
 # Load configuration and utilities
@@ -224,6 +222,3 @@ for (treatment in names(cells_per_treatment)) {
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("Validation data processing complete!")
-message("==========================================")

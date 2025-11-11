@@ -324,6 +324,3 @@ message("  Fisher results: ", TABLES_DIR)
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("Fisher enrichment analysis complete!")
-message("==========================================")

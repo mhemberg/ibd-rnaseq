@@ -5,8 +5,6 @@
 # Purpose: Analyze IL-22 expression and differential expression in T cell subsets
 # Input: T cell scRNA-seq data (tcell2_badrm_harmony35)
 # Output: DEG results, IL-22 expression statistics, and visualizations
-#
-# Original file: scRNAseq/il22/il22_deg.docx (dates: 20240916, 20240917, 20250113)
 ################################################################################
 
 # Load configuration and utilities
@@ -410,6 +408,4 @@ message("  Tables: ", TABLES_DIR)
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("IL-22 T cell analysis complete!")
-message("==========================================")
+

@@ -6,9 +6,6 @@
 # Input: Epithelial scRNA-seq data
 # Output: Expression statistics, DEG results, and visualizations
 #
-# Original files: 
-#   - scRNAseq/il22/epi_il22_tnfsf15.docx (date: 20241231, 20250110)
-#   - il22_microarray/epi_il22_tnfsf15.docx
 ################################################################################
 
 # Load configuration and utilities
@@ -496,6 +493,3 @@ message("  Visualizations: ", FIGURES_DIR)
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("TL1A and IL22RA1 analysis complete!")
-message("==========================================")

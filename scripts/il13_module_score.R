@@ -5,8 +5,6 @@
 # Purpose: Score IL-13 response signatures across epithelial cell types
 # Input: Epithelial scRNA-seq data, IL-13 microarray DEG results
 # Output: Module scores per cell, signature comparisons across patient groups
-#
-# Original file: IL13_microarray/addmodulescore.docx (date: 20250302)
 ################################################################################
 
 # Load configuration and utilities
@@ -256,20 +254,21 @@ for (i in seq_along(COMPARISON_SETS)) {
   main_celltype <- "Unknown"
 }
 
-# Then check length
-cat("Creating result_row with", length(c(sig_name, test_result$p.value, mean_group1, mean_group2, celltype, main_celltype)), "elements\n")
 
-	sig_name <- rownames(gmt_data)[sig_idx]
-result_row <- c(
-  sig_name,
-  test_result$p.value,
-  mean_group1,
-  mean_group2,
-  celltype,
-  as.character(main_celltype)  # ← Force to character
-)
 
-	results <- rbind(results, result_row)
+# Get signature name and main cell type
+        sig_name <- rownames(gmt_data)[sig_idx]
+        
+        # Store results
+        result_row <- c(
+          sig_name,
+          test_result$p.value,
+          mean_group1,
+          mean_group2,
+          celltype
+        )
+        
+        results <- rbind(results, result_row)
       }
     }
     
@@ -281,7 +280,7 @@ result_row <- c(
     
     # Format results
     results_df <- as.data.frame(results, stringsAsFactors = FALSE)
-    colnames(results_df) <- c("row.names", "pval", group1, group2, "cell", "maincelltype")
+    colnames(results_df) <- c("row.names", "pval", group1, group2, "cell")
     
     # Convert numeric columns - NOW column 2 is pval, 3 is group1, 4 is group2
     results_df$pval <- as.numeric(results_df$pval)
@@ -399,6 +398,3 @@ message("  Visualizations: ", FIGURES_DIR)
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("IL-13 module scoring analysis complete!")
-message("==========================================")

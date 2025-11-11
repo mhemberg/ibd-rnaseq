@@ -5,8 +5,6 @@
 # Purpose: Download, preprocess, and analyze IL-13 treatment microarray data
 # Input: GSE190705 data from GEO
 # Output: Processed count matrix and DESeq2 results
-#
-# Original file: IL13_microarray/preprocess.docx (date: 20250228)
 ################################################################################
 
 # Load configuration and utilities
@@ -426,6 +424,3 @@ for (i in 1:min(5, nrow(top_down))) {
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("IL-13 microarray preprocessing complete!")
-message("==========================================")

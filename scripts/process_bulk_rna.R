@@ -6,8 +6,6 @@
 # Input: STAR-aligned BAM/SAM files
 # Output: Count matrices, DEG results, module scores
 #
-# Original file: bulk_seq.docx
-#
 # Treatments: LTB (Lymphotoxin beta), TGF-β, TNF-α
 # Design: Paired samples (treated vs control from same donor)
 ################################################################################
@@ -638,6 +636,3 @@ message("  Module scores: ", TABLES_DIR)
 # Save session info
 save_session_info(file.path(RESULTS_DIR, paste0(OUTPUT_PREFIX, "_session_info.txt")))
 
-message("\n==========================================")
-message("Bulk RNA-seq processing complete!")
-message("==========================================")

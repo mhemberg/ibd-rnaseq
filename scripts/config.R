@@ -6,14 +6,10 @@
 # Usage: source("config.R") at the beginning of each script
 ################################################################################
 
-# Project Metadata ----
-PROJECT_NAME <- "ibd-transcriptomics"
-AUTHOR <- "Your Name"
-DATE_CREATED <- "2025-10-22"
-
 # Directory Structure ----
 # Root directory - modify this to match your system
-ROOT_DIR <- "/Users/mh1015/JaewonBarcelonaFiles/ClaudeScripts/githubtest/ibd-transcriptomics"  # CHANGE THIS TO YOUR PROJECT ROOT
+#ROOT_DIR <- "/path/to/your/project/"  # CHANGE THIS TO YOUR PROJECT ROOT
+ROOT_DIR <- "/Users/mh1015/JaewonBarcelonaFiles/ClaudeScripts/newgithub"  # CHANGE THIS TO YOUR PROJECT ROOT
 
 # Data directories
 DATA_DIR <- file.path(ROOT_DIR, "data")
