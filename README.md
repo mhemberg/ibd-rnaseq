@@ -123,7 +123,7 @@ Run process_scrna_main.R to process the outputs from Cell Ranger which should be
   - PFD uninflamed (group 6)
   - CD inflamed (group 3)
   - PFD inflamed (group 4)
-  - Healthy control (group 7)
+  - PFD remission (group 7)
 
 ### Cellphonedb data
 
@@ -158,7 +158,7 @@ For most analyses, we consider the following groups:
 3. PFD inflamed vs CD uninflamed (4 vs 5)
 4. PFD uninflamed vs CD inflamed (6 vs 3)
 5. PFD uninflamed vs Healthy (6 vs 7)
-6. Healthy vs CD uninflamed (7 vs 5)
+6. PFD remission vs CD uninflamed (7 vs 5)
 
 
 ## Citation
